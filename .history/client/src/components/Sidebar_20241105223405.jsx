@@ -15,9 +15,9 @@ const Sidebar = ({ sidebarOpen }) => {
 
 	// Menu items with icons and labels
 	const menuItems = [
-		{ icon: LiaStoreAltSolid, label: "Dashboard" },
+		{ icon: LiaStoreAltSolid, label: "Dashboards" },
 		{ icon: SlScreenDesktop, label: "My Store" },
-		{ icon: TbAirBalloon, label: "Application" },
+		{ icon: TbAirBalloon, label: "Applications" },
 		{ icon: HiOutlineBuildingOffice, label: "UI" },
 		{ icon: TbArrowBearRight2, label: "Menu" },
 		

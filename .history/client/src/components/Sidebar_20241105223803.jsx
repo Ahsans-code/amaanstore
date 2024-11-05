@@ -25,7 +25,7 @@ const Sidebar = ({ sidebarOpen }) => {
 	const navigate = useNavigate()
 	const handleNavigation = (label) => {
 		
-		navigate(`${label}`)
+		navigate(`/${label}`)
 	}
 
 	return (

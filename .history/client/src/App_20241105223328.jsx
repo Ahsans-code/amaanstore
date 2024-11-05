@@ -34,7 +34,7 @@ const App = () => {
 			<Header toggleSidebar={toggleSidebar} />
 			<div
 				className={`flex transition-all duration-300 ${sidebarOpen ? "w-11/12 " : "w-full"
-					} absolute right-0 pt-24 bg-gray-100`}
+					} absolute right-0 pt-24`}
 			>
 				<Outlet />
 

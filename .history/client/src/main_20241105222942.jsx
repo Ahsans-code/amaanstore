@@ -10,7 +10,6 @@ import Home from './pages/Home.jsx';
 import Mystore from './pages/Mystore.jsx';
 import Application from './pages/Application.jsx';
 import UI from './pages/UI.jsx';
-import Menu from './pages/Menu.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,25 +20,25 @@ const router = createBrowserRouter([
       element: <Home />,
     },
     {
-      path: "/Dashboard",
+      path: "/Dashboards",
       element: <Home />,
     },
     {
-      path:'/My Store',
+      pah:'/My Store',
       element:<Mystore/>
     },
     {
-      path:'Application',
+      pah:'/Application',
       element:<Application/>
     },
     {
-      path:'/UI',
+      pah:'/UI',
       element:<UI/>
     }
     ,
     {
-      path:'/Menu',
-      element:<Menu/>
+      pah:'/Menu',
+      element:<UI/>
     }
     ]
   },

@@ -30,7 +30,7 @@ const Sidebar = ({ sidebarOpen }) => {
 
 	return (
 		<div
-			className={`fixed z-50 top-24 py-2 left-0 h-screen text-sm w-1/12 rounded-lg
+			className={`fixed z-50 top-24 py-2 left-0  text-sm w-1/12 rounded-lg
 				${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
 				transition-transform duration-300 ease-in-out z-50 shadow-2xl overflow-auto custom-scrollbar`}
 			style={{ fontFamily: "'Roboto', sans-serif" }}

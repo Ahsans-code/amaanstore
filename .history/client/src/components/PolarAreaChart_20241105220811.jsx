@@ -14,8 +14,8 @@ function PolarAreaChart() {
                 data: [7,8,6], // Example data
                 backgroundColor: [
                     '#4b9e6037',
-                    '#D4A01737',
-                    '#4b9e6037',
+                    '#D4A01773',
+                    '#4b9e6073',
                 ],
                 borderColor: [
                     '#4B9E60',

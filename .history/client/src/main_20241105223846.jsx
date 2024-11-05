@@ -25,20 +25,20 @@ const router = createBrowserRouter([
       element: <Home />,
     },
     {
-      path:'/My Store',
+      pah:'/My Store',
       element:<Mystore/>
     },
     {
-      path:'Application',
+      pah:'Application',
       element:<Application/>
     },
     {
-      path:'/UI',
+      pah:'/UI',
       element:<UI/>
     }
     ,
     {
-      path:'/Menu',
+      pah:'/Menu',
       element:<Menu/>
     }
     ]
