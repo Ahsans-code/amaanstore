@@ -45,11 +45,10 @@ const Sidebar = ({ sidebarOpen }) => {
     }
   ]
   return (
-    <div className={`w-fit  z-50 `}>
+    <div className={`w-fit shadow-2xl z-50 `}>
       <div
         className={`fixed  z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out  custom-scrollbar rounded-lg
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-                ${newSidebar?'':'shadow-2xl'}
                 w-[100px] md:w-[110px]`}
         style={{ fontFamily: "'Roboto', sans-serif" }}
       >
@@ -83,7 +82,7 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
 
       </div>
-      <div className={`${newSidebar ? 'left-[110px]' : '-translate-x-full'} fixed h-screen transition-all duration-300 ease-in-out top-24 shadow-2xl  z-40 rounded-lg  bg-white w-[150px] md:w-[220px] border-l-[1px]`}>
+      <div className={`${newSidebar ? 'left-[110px]' : '-translate-x-full'} fixed h-screen transition-all duration-300 ease-in-out top-24 shadow-xl  z-40 rounded-lg shadow-lg bg-white w-[150px] md:w-[220px] border-l-[1px]`}>
         {
           mystoredata.map((item) => (
             <Link className="flex gap-4 text-gray-600 items-center pl-5 text-sm px-2 pt-7 hover:text-[#4B9E60]"

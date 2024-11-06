@@ -1,21 +1,15 @@
-import { useState , useEffect} from "react";
+import { useState } from "react";
 import { SlScreenDesktop } from "react-icons/sl";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import { TbAirBalloon } from "react-icons/tb";
 import { HiOutlineBuildingOffice } from "react-icons/hi2";
 import { TbArrowBearRight2 } from "react-icons/tb";
-import { IoStorefrontSharp } from "react-icons/io5";
-import { IoStorefrontOutline } from "react-icons/io5";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ sidebarOpen }) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate('/')
-  }, [])
   const [activeIndex, setActiveIndex] = useState(0);
-  const [newSidebar, setNewSidebar] = useState(false)
+  const [neSidebar, setNewSidebar] = useState(false)
   const menuItems = [
     { icon: LiaStoreAltSolid, label: "Dashboard" },
     { icon: SlScreenDesktop, label: "My-store" },
@@ -24,32 +18,19 @@ const Sidebar = ({ sidebarOpen }) => {
     { icon: TbArrowBearRight2, label: "Menu" },
   ];
 
- 
+  const navigate = useNavigate();
   const handleNavigation = (label) => {
-
     if (label == 'My-store') {
-      setNewSidebar(prev => !prev)
       return
     }
-    setNewSidebar(false)
     navigate(`/${label}`);
   };
-  const mystoredata = [
-    {
-      icon: <IoStorefrontSharp />,
-      text: 'Manage-Store'
-    },
-    {
-      icon: <IoStorefrontOutline />,
-      text: 'Create-Store'
-    }
-  ]
+
   return (
-    <div className={`w-fit  z-50 `}>
+    <>
       <div
-        className={`fixed  z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out  custom-scrollbar rounded-lg
+        className={`fixed z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out shadow-2xl custom-scrollbar
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-                ${newSidebar?'':'shadow-2xl'}
                 w-[100px] md:w-[110px]`}
         style={{ fontFamily: "'Roboto', sans-serif" }}
       >
@@ -83,21 +64,10 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
 
       </div>
-      <div className={`${newSidebar ? 'left-[110px]' : '-translate-x-full'} fixed h-screen transition-all duration-300 ease-in-out top-24 shadow-2xl  z-40 rounded-lg  bg-white w-[150px] md:w-[220px] border-l-[1px]`}>
-        {
-          mystoredata.map((item) => (
-            <Link className="flex gap-4 text-gray-600 items-center pl-5 text-sm px-2 pt-7 hover:text-[#4B9E60]"
-              to={`/${item.text}`}
-              onClick={() => setNewSidebar(false)}
-            >
-              {item.icon}
-              <p>{item.text.replace('-', ' ')}</p>
-            </Link>
-          ))
-        }
+      <div className="h-screen absolute top-0 z-40 rounded-2xl shadow-lg bg-white w-[100px] md:w-[110px] translate-x-full">
 
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState } from "react";
 import { SlScreenDesktop } from "react-icons/sl";
 import { LiaStoreAltSolid } from "react-icons/lia";
 import { TbAirBalloon } from "react-icons/tb";
@@ -10,10 +10,6 @@ import { IoStorefrontOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ sidebarOpen }) => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    navigate('/')
-  }, [])
   const [activeIndex, setActiveIndex] = useState(0);
   const [newSidebar, setNewSidebar] = useState(false)
   const menuItems = [
@@ -24,7 +20,7 @@ const Sidebar = ({ sidebarOpen }) => {
     { icon: TbArrowBearRight2, label: "Menu" },
   ];
 
- 
+  const navigate = useNavigate();
   const handleNavigation = (label) => {
 
     if (label == 'My-store') {
@@ -45,11 +41,10 @@ const Sidebar = ({ sidebarOpen }) => {
     }
   ]
   return (
-    <div className={`w-fit  z-50 `}>
+    <div className="shadow-2xl">
       <div
-        className={`fixed  z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out  custom-scrollbar rounded-lg
+        className={`fixed z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out  custom-scrollbar rounded-lg
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-                ${newSidebar?'':'shadow-2xl'}
                 w-[100px] md:w-[110px]`}
         style={{ fontFamily: "'Roboto', sans-serif" }}
       >
@@ -83,15 +78,15 @@ const Sidebar = ({ sidebarOpen }) => {
         </div>
 
       </div>
-      <div className={`${newSidebar ? 'left-[110px]' : '-translate-x-full'} fixed h-screen transition-all duration-300 ease-in-out top-24 shadow-2xl  z-40 rounded-lg  bg-white w-[150px] md:w-[220px] border-l-[1px]`}>
+      <div className={`${newSidebar ? '' : '-translate-x-full'} fixed h-screen transition-all duration-300 ease-in-out top-24  z-40 rounded-lg shadow-lg bg-white w-[110px] md:w-[130px] border-l-[1px]`}>
         {
           mystoredata.map((item) => (
-            <Link className="flex gap-4 text-gray-600 items-center pl-5 text-sm px-2 pt-7 hover:text-[#4B9E60]"
-              to={`/${item.text}`}
-              onClick={() => setNewSidebar(false)}
+            <Link className="flex gap-2 items-center text-xs px-2 py-4 hover:text-[#4B9E60]"
+            to={`/${item.text}`}
+            onClick={()=>setNewSidebar(false)}
             >
               {item.icon}
-              <p>{item.text.replace('-', ' ')}</p>
+              <p>{item.text.replace('-',' ')}</p>
             </Link>
           ))
         }

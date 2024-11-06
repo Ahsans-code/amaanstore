@@ -45,11 +45,10 @@ const Sidebar = ({ sidebarOpen }) => {
     }
   ]
   return (
-    <div className={`w-fit  z-50 `}>
+    <div className={`w-fit shadow-2xl z-50 `}>
       <div
         className={`fixed  z-50 top-24 pb-24 left-0 h-screen bg-white text-sm transition-transform duration-300 ease-in-out  custom-scrollbar rounded-lg
                 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-                ${newSidebar?'':'shadow-2xl'}
                 w-[100px] md:w-[110px]`}
         style={{ fontFamily: "'Roboto', sans-serif" }}
       >

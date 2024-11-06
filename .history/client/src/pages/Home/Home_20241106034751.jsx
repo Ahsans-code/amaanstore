@@ -135,7 +135,7 @@ const Home = () => {
 	]
 	return (
 		<div className="w-full  px-4 md:px-8 lg:px-12 py-10   ">
-			<Heading title={'Dashboard'} sub1={'Home'} sub2={'Dashboard'} />
+			<Heading title={'Ecommerce'} sub1={'Home'} sub2={'Ecommerce'} />
 			<div className="flex flex-col lg:flex-row items-start py-6 lg:h-[110vh] ">
 				<div className="w-full lg:w-1/2 h-full max-lg:pb-4 lg:pr-3">
 					<div className="  w-full md:h-1/3 ">

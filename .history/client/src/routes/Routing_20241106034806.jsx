@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Sidebar } from '../components/Components';
 import { Application, CreateStore, Home, ManageStore, Menu, Mystore, UI } from '../pages/Pages';
 
 export default function Routing() {
-    
     const [sidebarOpen, setSidebarOpen] = useState(true);
 
     const toggleSidebar = () => {

@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Sidebar } from '../components/Components';
-import { Application, CreateStore, Home, ManageStore, Menu, Mystore, UI } from '../pages/Pages';
+import { Application, Home, ManageStore, Menu, Mystore, UI } from '../pages/Pages';
 
 export default function Routing() {
-    
     const [sidebarOpen, setSidebarOpen] = useState(true);
 
     const toggleSidebar = () => {
@@ -16,7 +15,7 @@ export default function Routing() {
             <Header toggleSidebar={toggleSidebar} />
             <Sidebar sidebarOpen={sidebarOpen} />
             <div className={`flex transition-all duration-300 ${sidebarOpen ? "w-full md:w-11/12" : "w-full"}
-                absolute right-0 pt-24 text-gray-700`}>
+                absolute right-0 pt-24`}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/Dashboard" element={<Home />} />
@@ -25,7 +24,6 @@ export default function Routing() {
                     <Route path="/Menu" element={<Menu />} />
                     <Route path="/UI" element={<UI />} />
                     <Route path="/Manage-Store" element={<ManageStore />} />
-                    <Route path="/Create-Store" element={<CreateStore />} />
                 </Routes>
             </div>
         </Router>
