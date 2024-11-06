@@ -1,0 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+      font-family: "Nunito", sans-serif;
+}
+:root {
+    --color-primary: #4B9E60; /* Example primary color */
+    --color-bg:#f3f4f6;
+  }
+.custom-scrollbar {
+    overflow-y: scroll;
+    /* height: 200px; Example height */
+   
+    
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 100%;
+   
+}
+.custom-scrollbar:hover::-webkit-scrollbar-thumb{
+    background-color: #cccccc8f;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+   
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+   
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+.home-options .slick-slide > div{
+    margin: 0px 10px;
+    height: 100%;
+    border-radius: 50%;
+}
+.home-options .slick-list,.home-options .slick-track{
+    height: 100%;
+}
+.home-options .slick-list{
+    padding: 10px 0px;
+}
