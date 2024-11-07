@@ -1,5 +1,0 @@
-export {default as Home} from './Home/Home'
-export {default as Application} from './Application/Application'
-export {default as Menu} from './Menu/Menu'
-export {default as Mystore} from './Mystore/Mystore'
-export {default as UI} from './UI/UI'
